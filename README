@@ -1,0 +1,38 @@
+# Biblioteca Pessoal
+
+Aplicação web para organizar e gerenciar uma biblioteca pessoal de livros.
+
+## Funcionalidades
+
+- Cadastro e gerenciamento de livros.
+- Páginas para consultar informações dos livros.
+- Lista de desejos.
+- Área de comunidade.
+- Controle de finanças relacionadas à leitura.
+- Configurações e personalização da interface.
+- Arquivos CSS responsivos e suporte a temas.
+
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Como executar
+
+1. Baixe ou clone este repositório.
+2. Abra o arquivo `index.html` em um navegador.
+3. Navegue pelas páginas da aplicação.
+
+## Estrutura do projeto
+
+- `index.html`: página inicial.
+- `css/`: estilos visuais.
+- `js/`: funcionalidades JavaScript.
+- `pages/`: páginas adicionais.
+- `assets/`: recursos visuais.
+- `data/`: diretório de dados.
+
+## Observação
+
+Este README descreve a estrutura identificada no projeto. A disponibilidade de cada funcionalidade depende da implementação presente nos arquivos.
