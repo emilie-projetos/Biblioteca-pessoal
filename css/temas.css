@@ -1,0 +1,1329 @@
+/* ============================================================
+   BIBLIOTECA PESSOAL
+   Arquivo: css/temas.css
+
+   Este arquivo controla a aparência global dos temas.
+
+   Temas:
+   - Clássico
+   - Academia
+   - Cottagecore
+   - Sombrio
+
+   O arquivo NÃO controla o layout.
+   Ele controla principalmente:
+   - cores
+   - fundos
+   - bordas
+   - textos
+   - botões
+   - cards
+   - formulários
+   - menus
+   ============================================================ */
+
+
+/* ============================================================
+   1. VARIÁVEIS PADRÃO
+   ============================================================ */
+
+:root {
+
+    --tema-fundo: #f5e6cc;
+
+    --tema-fundo-secundario: #ead7b7;
+
+    --tema-superficie: #fffaf0;
+
+    --tema-superficie-2: #f7eddc;
+
+    --tema-madeira: #5d4037;
+
+    --tema-madeira-2: #6d4c41;
+
+    --tema-madeira-3: #8d6e63;
+
+    --tema-texto: #3e2723;
+
+    --tema-texto-secundario: #6d4c41;
+
+    --tema-destaque: #c8a951;
+
+    --tema-destaque-2: #a98936;
+
+    --tema-borda: #c9ae82;
+
+    --tema-sombra: rgba(62, 39, 35, 0.18);
+
+    --tema-sucesso: #557a45;
+
+    --tema-perigo: #9c3d3d;
+
+    --tema-input: #ffffff;
+
+    --tema-hover: #ead7b7;
+
+}
+
+
+/* ============================================================
+   2. CLÁSSICO
+   ============================================================ */
+
+body.tema-classico {
+
+    --tema-fundo: #f5e6cc;
+
+    --tema-fundo-secundario: #ead7b7;
+
+    --tema-superficie: #fffaf0;
+
+    --tema-superficie-2: #f7eddc;
+
+    --tema-madeira: #5d4037;
+
+    --tema-madeira-2: #6d4c41;
+
+    --tema-madeira-3: #8d6e63;
+
+    --tema-texto: #3e2723;
+
+    --tema-texto-secundario: #6d4c41;
+
+    --tema-destaque: #c8a951;
+
+    --tema-destaque-2: #a98936;
+
+    --tema-borda: #c9ae82;
+
+    --tema-sombra: rgba(62, 39, 35, 0.18);
+
+    --tema-input: #ffffff;
+
+    --tema-hover: #ead7b7;
+
+}
+
+
+/* ============================================================
+   3. ACADEMIA
+   ============================================================ */
+
+body.tema-academia {
+
+    --tema-fundo: #211b1a;
+
+    --tema-fundo-secundario: #302522;
+
+    --tema-superficie: #3a2c29;
+
+    --tema-superficie-2: #463530;
+
+    --tema-madeira: #261817;
+
+    --tema-madeira-2: #402421;
+
+    --tema-madeira-3: #654038;
+
+    --tema-texto: #f2e6d2;
+
+    --tema-texto-secundario: #d8c3a5;
+
+    --tema-destaque: #b99855;
+
+    --tema-destaque-2: #d0b56c;
+
+    --tema-borda: #765748;
+
+    --tema-sombra: rgba(0, 0, 0, 0.4);
+
+    --tema-input: #302522;
+
+    --tema-hover: #503933;
+
+}
+
+
+/* ============================================================
+   4. COTTAGECORE
+   ============================================================ */
+
+body.tema-cottagecore {
+
+    --tema-fundo: #edf0d8;
+
+    --tema-fundo-secundario: #dce4bd;
+
+    --tema-superficie: #fff9e9;
+
+    --tema-superficie-2: #f4efd9;
+
+    --tema-madeira: #675442;
+
+    --tema-madeira-2: #80684e;
+
+    --tema-madeira-3: #9b8265;
+
+    --tema-texto: #38452f;
+
+    --tema-texto-secundario: #5b654d;
+
+    --tema-destaque: #a98355;
+
+    --tema-destaque-2: #85643f;
+
+    --tema-borda: #b8b993;
+
+    --tema-sombra: rgba(63, 72, 45, 0.16);
+
+    --tema-input: #fffdf5;
+
+    --tema-hover: #dfe6c4;
+
+}
+
+
+/* ============================================================
+   5. SOMBRIO
+   ============================================================ */
+
+body.tema-sombrio {
+
+    --tema-fundo: #111111;
+
+    --tema-fundo-secundario: #1b1b1b;
+
+    --tema-superficie: #222222;
+
+    --tema-superficie-2: #2b2b2b;
+
+    --tema-madeira: #161616;
+
+    --tema-madeira-2: #242424;
+
+    --tema-madeira-3: #373737;
+
+    --tema-texto: #f2f2f2;
+
+    --tema-texto-secundario: #c7c7c7;
+
+    --tema-destaque: #d4b35b;
+
+    --tema-destaque-2: #ebce78;
+
+    --tema-borda: #494949;
+
+    --tema-sombra: rgba(0, 0, 0, 0.55);
+
+    --tema-input: #191919;
+
+    --tema-hover: #333333;
+
+}
+
+
+/* ============================================================
+   6. FUNDO GERAL
+   ============================================================ */
+
+body {
+
+    background-color: var(--tema-fundo);
+
+    color: var(--tema-texto);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+/* ============================================================
+   7. TEXTOS
+   ============================================================ */
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p,
+body span,
+body label,
+body li {
+
+    color: inherit;
+
+}
+
+
+/* ============================================================
+   8. SIDEBAR
+   ============================================================ */
+
+.sidebar {
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--tema-madeira),
+            var(--tema-madeira-2)
+        );
+
+    color: #fff;
+
+    border-color:
+        var(--tema-borda);
+
+    box-shadow:
+        4px 0 20px var(--tema-sombra);
+
+}
+
+
+.sidebar .logo h1 {
+
+    color: #fff;
+
+}
+
+
+.sidebar nav a {
+
+    color: #fff;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.sidebar nav a:hover {
+
+    background:
+        var(--tema-hover);
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+.sidebar nav a.ativo {
+
+    background:
+        var(--tema-destaque);
+
+    color:
+        #2d211e;
+
+}
+
+
+/* ============================================================
+   9. TOPO
+   ============================================================ */
+
+.topo,
+.cabecalho-principal {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+.topo h1,
+.topo h2,
+.cabecalho-principal h1,
+.cabecalho-principal h2 {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+.topo p {
+
+    color:
+        var(--tema-texto-secundario);
+
+}
+
+
+/* ============================================================
+   10. CARDS
+   ============================================================ */
+
+.card {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border:
+        1px solid var(--tema-borda);
+
+    box-shadow:
+        0 6px 18px var(--tema-sombra);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.card h3 {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+.card p {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+/* ============================================================
+   11. ESTANTE
+   ============================================================ */
+
+.estante {
+
+    background:
+        var(--tema-superficie-2);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+/* ============================================================
+   12. TÍTULOS DE SEÇÃO
+   ============================================================ */
+
+.titulo-secao h2 {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+/* ============================================================
+   13. BOTÕES
+   ============================================================ */
+
+button,
+.botao-principal {
+
+    background:
+        var(--tema-destaque);
+
+    color:
+        #2d211e;
+
+    border:
+        1px solid var(--tema-destaque-2);
+
+    box-shadow:
+        0 3px 8px var(--tema-sombra);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+button:hover,
+.botao-principal:hover {
+
+    background:
+        var(--tema-destaque-2);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* ============================================================
+   14. BOTÕES SECUNDÁRIOS
+   ============================================================ */
+
+button.botao-secundario,
+.botao-secundario {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border:
+        1px solid var(--tema-borda);
+
+}
+
+
+button.botao-secundario:hover,
+.botao-secundario:hover {
+
+    background:
+        var(--tema-hover);
+
+}
+
+
+/* ============================================================
+   15. FORMULÁRIOS
+   ============================================================ */
+
+input,
+select,
+textarea {
+
+    background:
+        var(--tema-input);
+
+    color:
+        var(--tema-texto);
+
+    border:
+        1px solid var(--tema-borda);
+
+}
+
+
+input::placeholder,
+textarea::placeholder {
+
+    color:
+        var(--tema-texto-secundario);
+
+    opacity:
+        0.75;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    outline:
+        2px solid var(--tema-destaque);
+
+    border-color:
+        var(--tema-destaque);
+
+}
+
+
+/* ============================================================
+   16. FORMULÁRIOS DE LIVROS
+   ============================================================ */
+
+.formulario,
+.form-card,
+.formulario-livro,
+.card-formulario {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+/* ============================================================
+   17. TABELAS
+   ============================================================ */
+
+table {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+th {
+
+    background:
+        var(--tema-madeira);
+
+    color:
+        #fff;
+
+}
+
+
+td {
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+tr:hover td {
+
+    background:
+        var(--tema-hover);
+
+}
+
+
+/* ============================================================
+   18. MODAIS
+   ============================================================ */
+
+.modal {
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+}
+
+
+.modal-conteudo {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border:
+        1px solid var(--tema-borda);
+
+    box-shadow:
+        0 15px 40px var(--tema-sombra);
+
+}
+
+
+.modal-conteudo h2,
+.modal-conteudo h3,
+.modal-conteudo p {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+/* ============================================================
+   19. WISHLIST
+   ============================================================ */
+
+.wishlist-card,
+.item-wishlist,
+.lista-desejos-item {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+/* ============================================================
+   20. FINANÇAS
+   ============================================================ */
+
+.resumo-financas,
+.financeiro-card,
+.financa-card,
+.item-financa {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+.grafico-container,
+.grafico-card {
+
+    background:
+        var(--tema-superficie);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+/* ============================================================
+   21. COMUNIDADE
+   ============================================================ */
+
+.clube-card,
+.comunidade-card,
+.painel-clube,
+.comunidade-painel {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+.lista-mensagens,
+.mensagem,
+.evento-card,
+.meta-card,
+.enquete-card,
+.membro-card {
+
+    background:
+        var(--tema-superficie-2);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+/* ============================================================
+   22. CONFIGURAÇÕES
+   ============================================================ */
+
+.config-card,
+.configuracao-card,
+.secao-configuracao {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+.config-card h2,
+.config-card h3,
+.configuracao-card h2,
+.configuracao-card h3 {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+/* ============================================================
+   23. PREVISUALIZAÇÕES DE TEMA
+   ============================================================ */
+
+.tema-preview {
+
+    border:
+        2px solid var(--tema-borda);
+
+}
+
+
+.tema-preview:hover {
+
+    border-color:
+        var(--tema-destaque);
+
+}
+
+
+/* ============================================================
+   24. LIVRO ABERTO
+   ============================================================ */
+
+.pagina-livro {
+
+    background:
+        var(--tema-fundo);
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+.livro-aberto {
+
+    box-shadow:
+        0 15px 40px var(--tema-sombra);
+
+}
+
+
+.pagina {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+.pagina-conteudo {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+.ficha-livro {
+
+    background:
+        var(--tema-superficie-2);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+.personagem-tag {
+
+    background:
+        var(--tema-hover);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+.resenha-texto {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+/* ============================================================
+   25. SCRAPBOOK
+   ============================================================ */
+
+.scrapbook-area {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+.scrap-item {
+
+    background:
+        var(--tema-superficie-2);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+.scrap-nota,
+.scrap-frase {
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+/* ============================================================
+   26. LIVRO FECHADO
+   ============================================================ */
+
+.capa-fechada {
+
+    box-shadow:
+        0 12px 25px var(--tema-sombra);
+
+}
+
+
+/* ============================================================
+   27. LINKS
+   ============================================================ */
+
+a {
+
+    color:
+        var(--tema-madeira-2);
+
+}
+
+
+a:hover {
+
+    color:
+        var(--tema-destaque-2);
+
+}
+
+
+/* ============================================================
+   28. LISTAS E ÁREAS DE FILTRO
+   ============================================================ */
+
+.filtros,
+.filtros-area,
+.filtro-container {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+/* ============================================================
+   29. ESTADO VAZIO
+   ============================================================ */
+
+.vazio,
+.estado-vazio,
+.empty-state {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto-secundario);
+
+    border-color:
+        var(--tema-borda);
+
+}
+
+
+/* ============================================================
+   30. TEXTO SECUNDÁRIO
+   ============================================================ */
+
+.texto-secundario,
+.descricao,
+.subtitulo {
+
+    color:
+        var(--tema-texto-secundario);
+
+}
+
+
+/* ============================================================
+   31. LINHAS E DIVISORES
+   ============================================================ */
+
+hr {
+
+    border:
+        0;
+
+    border-top:
+        1px solid var(--tema-borda);
+
+}
+
+
+/* ============================================================
+   32. MODO ESCURO GLOBAL
+   ============================================================ */
+
+/*
+   Além do tema escolhido, o modo escuro força
+   componentes que ainda possuam cores claras.
+*/
+
+body.modo-escuro {
+
+    background-color:
+        var(--tema-fundo);
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+body.modo-escuro input,
+body.modo-escuro select,
+body.modo-escuro textarea {
+
+    background:
+        var(--tema-input);
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+body.modo-escuro .card,
+body.modo-escuro .modal-conteudo,
+body.modo-escuro .pagina,
+body.modo-escuro .ficha-livro,
+body.modo-escuro .scrapbook-area,
+body.modo-escuro .clube-card,
+body.modo-escuro .comunidade-card {
+
+    background:
+        var(--tema-superficie);
+
+    color:
+        var(--tema-texto);
+
+}
+
+
+/* ============================================================
+   33. TRANSIÇÃO GLOBAL
+   ============================================================ */
+
+body,
+.sidebar,
+.card,
+.pagina,
+.modal-conteudo,
+.scrapbook-area,
+.clube-card,
+.comunidade-card,
+input,
+select,
+textarea,
+button {
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* ============================================================
+   34. RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .cabecalho-usuario {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .foto-perfil-global {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        font-size:
+            24px;
+
+    }
+
+}
+
+```css
+/* ==========================================================
+   BIBLIOTECA PESSOAL
+   Estilo geral dos botões de todas as páginas
+   Arquivo: css/temas.css
+   ========================================================== */
+
+/* Botões comuns */
+button,
+.btn,
+.botao,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    font: inherit;
+    cursor: pointer;
+    border: 1px solid var(--cor-destaque, #8b6f9e);
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: var(--cor-destaque, #8b6f9e);
+    color: var(--cor-texto-botao, #ffffff);
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+button:hover,
+.btn:hover,
+.botao:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    filter: brightness(0.94);
+    transform: translateY(-1px);
+}
+
+/* Efeito ao clicar */
+button:active,
+.btn:active,
+.botao:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+    transform: translateY(0);
+}
+
+/* Foco para navegação por teclado */
+button:focus-visible,
+.btn:focus-visible,
+.botao:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="reset"]:focus-visible {
+    outline: 2px solid var(--cor-destaque, #8b6f9e);
+    outline-offset: 3px;
+}
+
+/* Botões desativados */
+button:disabled,
+.btn:disabled,
+.botao:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+```
+
+```css
+/* ==========================================================
+   CORREÇÃO GLOBAL DOS BOTÕES E LINKS
+   Arquivo: css/temas.css
+   ========================================================== */
+
+/* Cores de segurança caso o tema não defina essas variáveis */
+:root {
+    --cor-botao: var(--cor-destaque, #80618f);
+    --cor-texto-botao: #ffffff;
+}
+
+/* Botões e links que funcionam como botões */
+button,
+a.botao-principal,
+a.botao-secundario,
+a.botao-voltar,
+a.botao-perigo,
+a.botao-pequeno,
+label.botao-principal,
+label.botao-secundario,
+label.botao-pequeno,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    border: 1px solid var(--cor-botao);
+    border-radius: 9px;
+    background: var(--cor-botao);
+    color: var(--cor-texto-botao);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Botões principais */
+button.botao-principal,
+a.botao-principal {
+    background: var(--cor-botao);
+    color: var(--cor-texto-botao);
+}
+
+/* Botões secundários */
+button.botao-secundario,
+a.botao-secundario,
+label.botao-secundario {
+    background: transparent;
+    color: var(--cor-botao);
+}
+
+/* Botão de perigo */
+button.botao-perigo,
+a.botao-perigo {
+    background: #a83245;
+    border-color: #a83245;
+    color: #ffffff;
+}
+
+/* Botão de voltar */
+a.botao-voltar {
+    background: transparent;
+    color: var(--cor-botao);
+}
+
+/* Efeito ao passar o mouse */
+button:hover,
+a.botao-principal:hover,
+a.botao-secundario:hover,
+a.botao-voltar:hover,
+a.botao-perigo:hover,
+a.botao-pequeno:hover,
+label.botao-principal:hover,
+label.botao-secundario:hover,
+label.botao-pequeno:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    filter: brightness(0.95);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Links do menu lateral */
+.menu-lateral nav a,
+.sidebar nav a,
+.navegacao a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border-radius: 9px;
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+/* Destaque ao passar o mouse no menu */
+.menu-lateral nav a:hover,
+.sidebar nav a:hover,
+.navegacao a:hover {
+    background: var(--cor-destaque, #80618f);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Link da página atual */
+.menu-lateral nav a.ativo,
+.sidebar nav a.ativo,
+.sidebar nav a.menu-ativo,
+.navegacao a.ativo {
+    background: var(--cor-destaque, #80618f);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Foco acessível */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--cor-destaque, #80618f);
+    outline-offset: 3px;
+}
+
+/* Estado desativado */
+button:disabled,
+input:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+```

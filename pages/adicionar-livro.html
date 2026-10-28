@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Adicionar livro | Biblioteca Pessoal</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/biblioteca.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/darkmode.css"
+    >
+<link
+    rel="stylesheet"
+    href="../css/temas.css"
+>
+<link rel="stylesheet" href="../css/temas.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MENU
+    ====================================================== -->
+
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            📚
+            <span>Biblioteca</span>
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                🏠 Início
+            </a>
+
+            <a href="adicionar-livro.html">
+                ➕ Adicionar livro
+            </a>
+
+            <a href="livros-ano.html">
+                📅 Livros por ano
+            </a>
+
+            <a href="wishlist.html">
+                💭 Wishlist
+            </a>
+
+            <a href="financas.html">
+                💰 Finanças
+            </a>
+
+            <a href="comunidade.html">
+                👥 Comunidade
+            </a>
+
+            <a href="configuracoes.html">
+                ⚙️ Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="conteudo-principal">
+
+
+        <header class="cabecalho-pagina">
+
+            <a
+                href="../index.html"
+                class="botao-voltar"
+            >
+                ← Voltar
+            </a>
+
+
+            <span class="titulo-pequeno">
+                BIBLIOTECA PESSOAL
+            </span>
+
+
+            <h1 id="tituloPagina">
+                Adicionar novo livro
+            </h1>
+
+
+            <p id="descricaoPagina">
+                Registre uma nova leitura na sua biblioteca.
+            </p>
+
+        </header>
+
+
+
+        <!-- =================================================
+             FORMULÁRIO
+        ================================================== -->
+
+        <section class="formulario-container">
+
+
+            <form id="formLivro">
+
+
+                <!-- =========================================
+                     CAPA
+                ========================================== -->
+
+                <div class="grupo-formulario">
+
+                    <h2>
+                        📕 Capa
+                    </h2>
+
+
+                    <div class="campo">
+
+                        <label for="capa">
+                            Capa do livro
+                        </label>
+
+
+                        <input
+                            type="file"
+                            id="capa"
+                            accept="image/*"
+                        >
+
+
+                        <div
+                            id="previewCapa"
+                            class="preview-capa"
+                        >
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     INFORMAÇÕES
+                ========================================== -->
+
+                <div class="grupo-formulario">
+
+                    <h2>
+                        📚 Informações do livro
+                    </h2>
+
+
+                    <div class="grade-formulario">
+
+
+                        <div class="campo">
+
+                            <label for="titulo">
+                                Título *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="titulo"
+                                required
+                                placeholder="Ex.: O Hobbit"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="autor">
+                                Autor *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="autor"
+                                required
+                                placeholder="Ex.: J. R. R. Tolkien"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="genero">
+                                Gênero
+                            </label>
+
+                            <input
+                                type="text"
+                                id="genero"
+                                placeholder="Ex.: Fantasia"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="formato">
+                                Formato
+                            </label>
+
+                            <select id="formato">
+
+                                <option value="fisico">
+                                    Livro físico
+                                </option>
+
+                                <option value="ebook">
+                                    E-book
+                                </option>
+
+                                <option value="audiobook">
+                                    Audiobook
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     LEITURA
+                ========================================== -->
+
+                <div class="grupo-formulario">
+
+                    <h2>
+                        📖 Minha leitura
+                    </h2>
+
+
+                    <div class="grade-formulario">
+
+
+                        <div class="campo">
+
+                            <label for="inicio">
+                                Data de início
+                            </label>
+
+                            <input
+                                type="date"
+                                id="inicio"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="fim">
+                                Data de término
+                            </label>
+
+                            <input
+                                type="date"
+                                id="fim"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="status">
+                                Status
+                            </label>
+
+                            <select id="status">
+
+                                <option value="quero_ler">
+                                    Quero ler
+                                </option>
+
+                                <option value="lendo">
+                                    Lendo
+                                </option>
+
+                                <option value="lido">
+                                    Lido
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="avaliacao">
+                                Avaliação
+                            </label>
+
+                            <select id="avaliacao">
+
+                                <option value="0">
+                                    Sem avaliação
+                                </option>
+
+                                <option value="0.5">
+                                    ★ 0,5
+                                </option>
+
+                                <option value="1">
+                                    ★ 1,0
+                                </option>
+
+                                <option value="1.5">
+                                    ★ 1,5
+                                </option>
+
+                                <option value="2">
+                                    ★ 2,0
+                                </option>
+
+                                <option value="2.5">
+                                    ★ 2,5
+                                </option>
+
+                                <option value="3">
+                                    ★ 3,0
+                                </option>
+
+                                <option value="3.5">
+                                    ★ 3,5
+                                </option>
+
+                                <option value="4">
+                                    ★ 4,0
+                                </option>
+
+                                <option value="4.5">
+                                    ★ 4,5
+                                </option>
+
+                                <option value="5">
+                                    ★ 5,0
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     ORIGEM
+                ========================================== -->
+
+                <div class="grupo-formulario">
+
+                    <h2>
+                        🛍️ Como o livro chegou até mim?
+                    </h2>
+
+
+                    <div class="campo">
+
+                        <label for="origem">
+                            Origem
+                        </label>
+
+
+                        <select id="origem">
+
+                            <option value="comprado">
+                                Comprado
+                            </option>
+
+                            <option value="presente">
+                                Presente
+                            </option>
+
+                            <option value="emprestado">
+                                Emprestado
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     PERSONAGENS
+                ========================================== -->
+
+                <div class="grupo-formulario">
+
+                    <h2>
+                        ❤️ Personagens favoritos
+                    </h2>
+
+
+                    <div class="campo">
+
+                        <label for="personagens">
+                            Personagens
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="personagens"
+                            placeholder="Ex.: Frodo, Gandalf, Bilbo"
+                        >
+
+
+                        <small>
+                            Separe os nomes por vírgula.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     RESENHA
+                ========================================== -->
+
+                <div class="grupo-formulario">
+
+                    <h2>
+                        ✍️ Minha resenha
+                    </h2>
+
+
+                    <div class="campo">
+
+                        <label for="resenha">
+                            Resenha
+                        </label>
+
+
+                        <textarea
+                            id="resenha"
+                            rows="8"
+                            placeholder="Escreva o que você achou do livro..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     BOTÕES
+                ========================================== -->
+
+                <div class="acoes-formulario">
+
+                    <a
+                        href="../index.html"
+                        class="botao-secundario"
+                    >
+                        Cancelar
+                    </a>
+
+
+                    <button
+                        type="submit"
+                        id="botaoSalvar"
+                        class="botao-principal"
+                    >
+                        📚 Adicionar livro
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <!-- Recupera e salva os dados dos livros -->
+<script src="../js/storage.js"></script>
+
+<!-- Aplica o tema e o modo de tela escolhidos -->
+<script src="../js/tema.js"></script>
+
+<!-- Mantém as funções do formulário de livros -->
+<script src="../js/adicionarLivro.js"></script>
+</body>
+
+</html>

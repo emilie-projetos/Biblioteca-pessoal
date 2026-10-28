@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Comunidade | Biblioteca Pessoal</title>
+
+    <!-- CSS principal do projeto -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/biblioteca.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+
+    <!-- CSS exclusivo da comunidade -->
+    <link rel="stylesheet" href="../css/comunidade.css">
+
+    <link
+    rel="stylesheet"
+    href="../css/temas.css"
+>
+<link rel="stylesheet" href="../css/temas.css">
+
+</head>
+
+<body>
+
+    <!-- ======================================================
+         MENU LATERAL
+    ======================================================= -->
+
+    <aside class="menu-lateral">
+
+        <div class="logo-biblioteca">
+            <div class="logo-icone">📚</div>
+
+            <div>
+                <h1>Biblioteca</h1>
+                <span>Pessoal</span>
+            </div>
+        </div>
+
+        <nav class="navegacao">
+
+            <a href="../index.html">
+                🏠
+                <span>Minha Biblioteca</span>
+            </a>
+
+            <a href="adicionar-livro.html">
+                ➕
+                <span>Adicionar livro</span>
+            </a>
+
+            <a href="livros-ano.html">
+                📅
+                <span>Livros por ano</span>
+            </a>
+
+            <a href="wishlist.html">
+                ⭐
+                <span>Wishlist</span>
+            </a>
+
+            <a href="financas.html">
+                💰
+                <span>Finanças</span>
+            </a>
+
+            <a href="comunidade.html" class="ativo">
+                👥
+                <span>Comunidade</span>
+            </a>
+
+            <a href="configuracoes.html">
+                ⚙️
+                <span>Configurações</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ======================================================
+         CONTEÚDO PRINCIPAL
+    ======================================================= -->
+
+    <main class="conteudo-principal comunidade-pagina">
+
+        <!-- Cabeçalho -->
+
+        <header class="cabecalho-comunidade">
+
+            <div>
+                <span class="etiqueta-comunidade">
+                    ESPAÇO LITERÁRIO
+                </span>
+
+                <h1>Comunidade</h1>
+
+                <p>
+                    Encontre leitores, crie clubes e compartilhe
+                    suas experiências literárias.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                id="botaoCriarClube"
+                class="botao-principal"
+            >
+                + Criar clube
+            </button>
+
+        </header>
+
+
+        <!-- ==================================================
+             ABAS PRINCIPAIS
+        =================================================== -->
+
+        <div class="abas-comunidade">
+
+            <button
+                class="aba-comunidade ativa"
+                data-aba="clubes"
+            >
+                👥 Meus clubes
+            </button>
+
+            <button
+                class="aba-comunidade"
+                data-aba="descobrir"
+            >
+                🔎 Descobrir
+            </button>
+
+            <button
+                class="aba-comunidade"
+                data-aba="livros"
+            >
+                📚 Livros & autores
+            </button>
+
+        </div>
+
+
+        <!-- ==================================================
+             ABA: CLUBES
+        =================================================== -->
+
+        <section
+            id="abaClubes"
+            class="conteudo-aba-comunidade ativa"
+        >
+
+            <div class="titulo-secao-comunidade">
+
+                <div>
+                    <h2>Meus clubes</h2>
+
+                    <p>
+                        Seus clubes de leitura aparecem aqui.
+                    </p>
+                </div>
+
+                <span
+                    id="contadorClubes"
+                    class="contador-comunidade"
+                >
+                    0 clubes
+                </span>
+
+            </div>
+
+
+            <div
+                id="listaClubes"
+                class="grade-clubes"
+            >
+            </div>
+
+
+            <div
+                id="clubesVazio"
+                class="estado-vazio-comunidade"
+            >
+
+                <div class="vazio-icone">
+                    📚
+                </div>
+
+                <h3>Nenhum clube ainda</h3>
+
+                <p>
+                    Crie seu primeiro clube de leitura
+                    para começar.
+                </p>
+
+                <button
+                    type="button"
+                    id="botaoCriarClubeVazio"
+                    class="botao-principal"
+                >
+                    Criar meu primeiro clube
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             ABA: DESCOBRIR
+        =================================================== -->
+
+        <section
+            id="abaDescobrir"
+            class="conteudo-aba-comunidade"
+        >
+
+            <div class="titulo-secao-comunidade">
+
+                <div>
+                    <h2>Descobrir clubes</h2>
+
+                    <p>
+                        Explore clubes disponíveis neste navegador.
+                    </p>
+                </div>
+
+            </div>
+
+            <div
+                id="listaClubesDescobrir"
+                class="grade-clubes"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             ABA: LIVROS E AUTORES
+        =================================================== -->
+
+        <section
+            id="abaLivros"
+            class="conteudo-aba-comunidade"
+        >
+
+            <div class="titulo-secao-comunidade">
+
+                <div>
+                    <h2>Livros & autores</h2>
+
+                    <p>
+                        Veja os livros da sua biblioteca e abra
+                        uma comunidade para conversar sobre eles.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div
+                id="listaComunidadesLivros"
+                class="grade-comunidades-livros"
+            >
+            </div>
+
+
+            <div
+                id="livrosComunidadeVazio"
+                class="estado-vazio-comunidade"
+            >
+
+                <div class="vazio-icone">
+                    📖
+                </div>
+
+                <h3>Nenhum livro cadastrado</h3>
+
+                <p>
+                    Adicione livros à sua biblioteca para
+                    criar comunidades sobre eles.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PAINEL DO CLUBE
+        =================================================== -->
+
+        <section
+            id="painelClube"
+            class="painel-clube"
+        >
+
+            <!-- Cabeçalho do clube -->
+
+            <div class="cabecalho-clube">
+
+                <button
+                    type="button"
+                    id="botaoVoltarClubes"
+                    class="botao-voltar"
+                >
+                    ← Voltar
+                </button>
+
+
+                <div class="clube-identidade">
+
+                    <div
+                        id="clubeIcone"
+                        class="clube-icone-grande"
+                    >
+                        📚
+                    </div>
+
+                    <div>
+
+                        <span
+                            id="clubePrivacidade"
+                            class="etiqueta-clube"
+                        >
+                            PRIVADO
+                        </span>
+
+                        <h2 id="clubeTitulo">
+                            Clube
+                        </h2>
+
+                        <p id="clubeDescricao">
+                            Descrição do clube
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="botaoCompartilharClube"
+                    class="botao-secundario"
+                >
+                    🔗 Convite
+                </button>
+
+            </div>
+
+
+            <!-- Abas internas -->
+
+            <div class="abas-clube">
+
+                <button
+                    class="aba-clube ativa"
+                    data-clube-aba="conversa"
+                >
+                    💬 Conversa
+                </button>
+
+                <button
+                    class="aba-clube"
+                    data-clube-aba="calendario"
+                >
+                    📅 Calendário
+                </button>
+
+                <button
+                    class="aba-clube"
+                    data-clube-aba="metas"
+                >
+                    🎯 Metas
+                </button>
+
+                <button
+                    class="aba-clube"
+                    data-clube-aba="enquetes"
+                >
+                    📊 Enquetes
+                </button>
+
+                <button
+                    class="aba-clube"
+                    data-clube-aba="membros"
+                >
+                    👥 Membros
+                </button>
+
+                <button
+                    class="aba-clube"
+                    data-clube-aba="configuracao"
+                >
+                    ⚙️ Configurações
+                </button>
+
+            </div>
+
+
+            <!-- ==================================================
+                 CONVERSA
+            =================================================== -->
+
+            <div
+                class="conteudo-clube ativo"
+                data-conteudo-clube="conversa"
+            >
+
+                <div class="layout-conversa">
+
+                    <div class="conversa-principal">
+
+                        <div
+                            id="listaMensagens"
+                            class="lista-mensagens"
+                        >
+                        </div>
+
+                        <div
+                            id="mensagensVazio"
+                            class="mensagens-vazio"
+                        >
+                            <span>💬</span>
+
+                            <p>
+                                Nenhuma mensagem ainda.
+                                Comece a conversa!
+                            </p>
+                        </div>
+
+
+                        <form
+                            id="formMensagem"
+                            class="form-mensagem"
+                        >
+
+                            <input
+                                type="text"
+                                id="textoMensagem"
+                                placeholder="Escreva uma mensagem..."
+                                maxlength="500"
+                                autocomplete="off"
+                            >
+
+                            <button
+                                type="submit"
+                                class="botao-principal"
+                            >
+                                Enviar
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <aside class="resumo-clube">
+
+                        <div class="cartao-resumo">
+
+                            <span>👥</span>
+
+                            <div>
+                                <strong id="resumoMembros">
+                                    0
+                                </strong>
+
+                                <small>
+                                    membros
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="cartao-resumo">
+
+                            <span>📚</span>
+
+                            <div>
+                                <strong id="resumoLivro">
+                                    —
+                                </strong>
+
+                                <small>
+                                    leitura atual
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="cartao-resumo">
+
+                            <span>🎯</span>
+
+                            <div>
+                                <strong id="resumoMetas">
+                                    0
+                                </strong>
+
+                                <small>
+                                    metas
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 CALENDÁRIO
+            =================================================== -->
+
+            <div
+                class="conteudo-clube"
+                data-conteudo-clube="calendario"
+            >
+
+                <div class="titulo-interno-clube">
+
+                    <div>
+                        <h3>Calendário de encontros</h3>
+
+                        <p>
+                            Organize reuniões e eventos do clube.
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="botaoNovoEvento"
+                        class="botao-principal"
+                    >
+                        + Novo evento
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="listaEventos"
+                    class="lista-eventos"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 METAS
+            =================================================== -->
+
+            <div
+                class="conteudo-clube"
+                data-conteudo-clube="metas"
+            >
+
+                <div class="titulo-interno-clube">
+
+                    <div>
+                        <h3>Metas de leitura</h3>
+
+                        <p>
+                            Defina objetivos para o clube.
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="botaoNovaMeta"
+                        class="botao-principal"
+                    >
+                        + Nova meta
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="listaMetas"
+                    class="lista-metas"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 ENQUETES
+            =================================================== -->
+
+            <div
+                class="conteudo-clube"
+                data-conteudo-clube="enquetes"
+            >
+
+                <div class="titulo-interno-clube">
+
+                    <div>
+                        <h3>Enquetes</h3>
+
+                        <p>
+                            Decidam juntos os próximos livros
+                            e atividades.
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="botaoNovaEnquete"
+                        class="botao-principal"
+                    >
+                        + Nova enquete
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="listaEnquetes"
+                    class="lista-enquetes"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 MEMBROS
+            =================================================== -->
+
+            <div
+                class="conteudo-clube"
+                data-conteudo-clube="membros"
+            >
+
+                <div class="titulo-interno-clube">
+
+                    <div>
+                        <h3>Membros</h3>
+
+                        <p>
+                            O clube pode ter até 100 membros.
+                        </p>
+                    </div>
+
+                    <span
+                        id="contadorMembros"
+                        class="contador-membros"
+                    >
+                        0 / 100
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="listaMembros"
+                    class="lista-membros"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 CONFIGURAÇÕES DO CLUBE
+            =================================================== -->
+
+            <div
+                class="conteudo-clube"
+                data-conteudo-clube="configuracao"
+            >
+
+                <div class="titulo-interno-clube">
+
+                    <div>
+                        <h3>Configurações do clube</h3>
+
+                        <p>
+                            Altere as informações do clube.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="formEditarClube"
+                    class="form-clube"
+                >
+
+                    <div class="campo-formulario">
+
+                        <label for="editarNomeClube">
+                            Nome do clube
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editarNomeClube"
+                            required
+                            maxlength="80"
+                        >
+
+                    </div>
+
+
+                    <div class="campo-formulario">
+
+                        <label for="editarDescricaoClube">
+                            Descrição
+                        </label>
+
+                        <textarea
+                            id="editarDescricaoClube"
+                            rows="4"
+                            maxlength="300"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="campo-formulario">
+
+                        <label for="editarIconeClube">
+                            Ícone
+                        </label>
+
+                        <select id="editarIconeClube">
+
+                            <option value="📚">📚 Livros</option>
+                            <option value="📖">📖 Leitura</option>
+                            <option value="☕">☕ Café & livros</option>
+                            <option value="🌙">🌙 Leitura noturna</option>
+                            <option value="🌹">🌹 Romances</option>
+                            <option value="🔮">🔮 Fantasia</option>
+                            <option value="🚀">🚀 Ficção científica</option>
+                            <option value="🕵️">🕵️ Mistério</option>
+                            <option value="🏛️">🏛️ Clássicos</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo-formulario">
+
+                        <label for="editarPrivacidadeClube">
+                            Privacidade
+                        </label>
+
+                        <select id="editarPrivacidadeClube">
+
+                            <option value="privado">
+                                Privado
+                            </option>
+
+                            <option value="publico">
+                                Público
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao-principal"
+                    >
+                        Salvar alterações
+                    </button>
+
+                </form>
+
+
+                <div class="zona-perigo">
+
+                    <div>
+
+                        <h4>Excluir clube</h4>
+
+                        <p>
+                            Esta ação remove o clube e seus
+                            dados deste navegador.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="botaoExcluirClube"
+                        class="botao-perigo"
+                    >
+                        Excluir clube
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ======================================================
+         MODAL: CRIAR CLUBE
+    ======================================================= -->
+
+    <div
+        id="modalClube"
+        class="modal-comunidade"
+    >
+
+        <div class="modal-conteudo-comunidade">
+
+            <button
+                type="button"
+                class="modal-fechar-comunidade"
+                data-fechar-modal="modalClube"
+            >
+                ×
+            </button>
+
+            <span class="etiqueta-comunidade">
+                NOVO CLUBE
+            </span>
+
+            <h2>Criar clube de leitura</h2>
+
+            <p>
+                Crie um espaço para conversar sobre livros
+                com outras pessoas.
+            </p>
+
+
+            <form id="formNovoClube">
+
+                <div class="campo-formulario">
+
+                    <label for="nomeClube">
+                        Nome do clube
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeClube"
+                        placeholder="Ex.: Clube das Corujas"
+                        maxlength="80"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="descricaoClube">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricaoClube"
+                        rows="4"
+                        maxlength="300"
+                        placeholder="Sobre o que é este clube?"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="iconeClube">
+                        Ícone
+                    </label>
+
+                    <select id="iconeClube">
+
+                        <option value="📚">📚 Livros</option>
+                        <option value="📖">📖 Leitura</option>
+                        <option value="☕">☕ Café & livros</option>
+                        <option value="🌙">🌙 Leitura noturna</option>
+                        <option value="🌹">🌹 Romances</option>
+                        <option value="🔮">🔮 Fantasia</option>
+                        <option value="🚀">🚀 Ficção científica</option>
+                        <option value="🕵️">🕵️ Mistério</option>
+                        <option value="🏛️">🏛️ Clássicos</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="privacidadeClube">
+                        Privacidade
+                    </label>
+
+                    <select id="privacidadeClube">
+
+                        <option value="privado">
+                            Privado
+                        </option>
+
+                        <option value="publico">
+                            Público
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="botao-principal largura-total"
+                >
+                    Criar clube
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         MODAL: EVENTO
+    ======================================================= -->
+
+    <div
+        id="modalEvento"
+        class="modal-comunidade"
+    >
+
+        <div class="modal-conteudo-comunidade">
+
+            <button
+                type="button"
+                class="modal-fechar-comunidade"
+                data-fechar-modal="modalEvento"
+            >
+                ×
+            </button>
+
+            <span class="etiqueta-comunidade">
+                CALENDÁRIO
+            </span>
+
+            <h2>Novo evento</h2>
+
+            <form id="formEvento">
+
+                <div class="campo-formulario">
+
+                    <label for="tituloEvento">
+                        Título
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tituloEvento"
+                        required
+                        maxlength="100"
+                        placeholder="Ex.: Encontro mensal"
+                    >
+
+                </div>
+
+
+                <div class="campo-duplo">
+
+                    <div class="campo-formulario">
+
+                        <label for="dataEvento">
+                            Data
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dataEvento"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo-formulario">
+
+                        <label for="horaEvento">
+                            Horário
+                        </label>
+
+                        <input
+                            type="time"
+                            id="horaEvento"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="descricaoEvento">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricaoEvento"
+                        rows="4"
+                        maxlength="300"
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="botao-principal largura-total"
+                >
+                    Criar evento
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         MODAL: META
+    ======================================================= -->
+
+    <div
+        id="modalMeta"
+        class="modal-comunidade"
+    >
+
+        <div class="modal-conteudo-comunidade">
+
+            <button
+                type="button"
+                class="modal-fechar-comunidade"
+                data-fechar-modal="modalMeta"
+            >
+                ×
+            </button>
+
+            <span class="etiqueta-comunidade">
+                NOVA META
+            </span>
+
+            <h2>Meta de leitura</h2>
+
+            <form id="formMeta">
+
+                <div class="campo-formulario">
+
+                    <label for="tituloMeta">
+                        Meta
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tituloMeta"
+                        required
+                        maxlength="100"
+                        placeholder="Ex.: Ler 5 livros"
+                    >
+
+                </div>
+
+
+                <div class="campo-duplo">
+
+                    <div class="campo-formulario">
+
+                        <label for="quantidadeMeta">
+                            Quantidade
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantidadeMeta"
+                            min="1"
+                            max="999"
+                            value="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo-formulario">
+
+                        <label for="prazoMeta">
+                            Prazo
+                        </label>
+
+                        <input
+                            type="date"
+                            id="prazoMeta"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="botao-principal largura-total"
+                >
+                    Criar meta
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         MODAL: ENQUETE
+    ======================================================= -->
+
+    <div
+        id="modalEnquete"
+        class="modal-comunidade"
+    >
+
+        <div class="modal-conteudo-comunidade">
+
+            <button
+                type="button"
+                class="modal-fechar-comunidade"
+                data-fechar-modal="modalEnquete"
+            >
+                ×
+            </button>
+
+            <span class="etiqueta-comunidade">
+                NOVA ENQUETE
+            </span>
+
+            <h2>Criar enquete</h2>
+
+            <form id="formEnquete">
+
+                <div class="campo-formulario">
+
+                    <label for="perguntaEnquete">
+                        Pergunta
+                    </label>
+
+                    <input
+                        type="text"
+                        id="perguntaEnquete"
+                        required
+                        maxlength="200"
+                        placeholder="Qual livro devemos ler?"
+                    >
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label>
+                        Opções
+                    </label>
+
+                    <input
+                        type="text"
+                        class="opcao-enquete"
+                        placeholder="Opção 1"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        class="opcao-enquete"
+                        placeholder="Opção 2"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        class="opcao-enquete"
+                        placeholder="Opção 3"
+                    >
+
+                    <input
+                        type="text"
+                        class="opcao-enquete"
+                        placeholder="Opção 4"
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="botao-principal largura-total"
+                >
+                    Criar enquete
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================================
+         MODAL: CONVITE
+    ======================================================= -->
+
+    <div
+        id="modalConvite"
+        class="modal-comunidade"
+    >
+
+        <div class="modal-conteudo-comunidade">
+
+            <button
+                type="button"
+                class="modal-fechar-comunidade"
+                data-fechar-modal="modalConvite"
+            >
+                ×
+            </button>
+
+            <span class="etiqueta-comunidade">
+                CONVITE
+            </span>
+
+            <h2>Convide alguém</h2>
+
+            <p>
+                Este código identifica o clube neste navegador.
+            </p>
+
+
+            <div class="convite-caixa">
+
+                <strong id="codigoConvite">
+                    —
+                </strong>
+
+                <button
+                    type="button"
+                    id="botaoCopiarConvite"
+                    class="botao-secundario"
+                >
+                    Copiar
+                </button>
+
+            </div>
+
+
+            <div class="campo-formulario">
+
+                <label for="codigoEntrada">
+                    Entrar com código
+                </label>
+
+                <input
+                    type="text"
+                    id="codigoEntrada"
+                    placeholder="Cole o código recebido"
+                >
+
+                <button
+                    type="button"
+                    id="botaoEntrarCodigo"
+                    class="botao-principal largura-total"
+                >
+                    Entrar no clube
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+   <!-- Recupera e salva os dados -->
+<script src="../js/storage.js"></script>
+
+<!-- Aplica o tema global -->
+<script src="../js/tema.js"></script>
+
+<!-- Mantém clubes, conversas, metas e enquetes -->
+<script src="../js/comunidade.js"></script>
+
+</body>
+
+</html>

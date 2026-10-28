@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configurações | Biblioteca Pessoal</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/biblioteca.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <link rel="stylesheet" href="../css/configuracoes.css">
+<link
+    rel="stylesheet"
+    href="../css/temas.css"
+>
+
+<link rel="stylesheet" href="../css/temas.css">
+
+</head>
+
+<body>
+
+    <!-- ======================================================
+         MENU LATERAL
+    ======================================================= -->
+
+    <aside class="menu-lateral">
+
+        <div class="logo-biblioteca">
+
+            <div class="logo-icone">
+                📚
+            </div>
+
+            <div>
+                <h1>Biblioteca</h1>
+                <span>Pessoal</span>
+            </div>
+
+        </div>
+
+
+        <nav class="navegacao">
+
+            <a href="../index.html">
+                🏠
+                <span>Minha Biblioteca</span>
+            </a>
+
+            <a href="adicionar-livro.html">
+                ➕
+                <span>Adicionar livro</span>
+            </a>
+
+            <a href="livros-ano.html">
+                📅
+                <span>Livros por ano</span>
+            </a>
+
+            <a href="wishlist.html">
+                ⭐
+                <span>Wishlist</span>
+            </a>
+
+            <a href="financas.html">
+                💰
+                <span>Finanças</span>
+            </a>
+
+            <a href="comunidade.html">
+                👥
+                <span>Comunidade</span>
+            </a>
+
+            <a href="configuracoes.html" class="ativo">
+                ⚙️
+                <span>Configurações</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ======================================================
+         CONTEÚDO
+    ======================================================= -->
+
+    <main class="conteudo-principal configuracoes-pagina">
+
+        <header class="cabecalho-configuracoes">
+
+            <div>
+
+                <span class="etiqueta-configuracao">
+                    PERSONALIZAÇÃO
+                </span>
+
+                <h1>Configurações</h1>
+
+                <p>
+                    Personalize sua Biblioteca Pessoal
+                    do seu jeito.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             PERFIL
+        =================================================== -->
+
+        <section class="cartao-configuracao">
+
+            <div class="titulo-configuracao">
+
+                <div class="icone-configuracao">
+                    👤
+                </div>
+
+                <div>
+
+                    <h2>Meu perfil</h2>
+
+                    <p>
+                        Informações que aparecem
+                        na sua biblioteca.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="perfil-configuracao">
+
+                <div class="foto-perfil-area">
+
+                    <div
+                        id="fotoPerfilPreview"
+                        class="foto-perfil-preview"
+                    >
+                        👤
+                    </div>
+
+                    <label
+                        for="fotoPerfil"
+                        class="botao-secundario"
+                    >
+                        Escolher foto
+                    </label>
+
+                    <input
+                        type="file"
+                        id="fotoPerfil"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <button
+                        type="button"
+                        id="removerFoto"
+                        class="botao-texto"
+                    >
+                        Remover foto
+                    </button>
+
+                </div>
+
+
+                <div class="form-configuracao">
+
+                    <div class="campo-configuracao">
+
+                        <label for="nomeUsuario">
+                            Seu nome
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nomeUsuario"
+                            placeholder="Como você quer ser chamado?"
+                            maxlength="80"
+                        >
+
+                    </div>
+
+
+                    <div class="campo-configuracao">
+
+                        <label for="nomeBiblioteca">
+                            Nome da biblioteca
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nomeBiblioteca"
+                            placeholder="Ex.: Biblioteca da Ana"
+                            maxlength="100"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             TEMA
+        =================================================== -->
+
+        <section class="cartao-configuracao">
+
+            <div class="titulo-configuracao">
+
+                <div class="icone-configuracao">
+                    🎨
+                </div>
+
+                <div>
+
+                    <h2>Aparência</h2>
+
+                    <p>
+                        Escolha o estilo da sua biblioteca.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="temas-grid">
+
+                <label class="tema-opcao">
+
+                    <input
+                        type="radio"
+                        name="tema"
+                        value="classico"
+                    >
+
+                    <div class="tema-preview tema-classico">
+
+                        <div class="mini-estante">
+                            📚📚📚
+                        </div>
+
+                        <strong>
+                            Biblioteca Clássica
+                        </strong>
+
+                        <span>
+                            Madeira e papel
+                        </span>
+
+                    </div>
+
+                </label>
+
+
+                <label class="tema-opcao">
+
+                    <input
+                        type="radio"
+                        name="tema"
+                        value="academia"
+                    >
+
+                    <div class="tema-preview tema-academia">
+
+                        <div class="mini-estante">
+                            📜📚🏛️
+                        </div>
+
+                        <strong>
+                            Academia
+                        </strong>
+
+                        <span>
+                            Elegante e intelectual
+                        </span>
+
+                    </div>
+
+                </label>
+
+
+                <label class="tema-opcao">
+
+                    <input
+                        type="radio"
+                        name="tema"
+                        value="cottagecore"
+                    >
+
+                    <div class="tema-preview tema-cottagecore">
+
+                        <div class="mini-estante">
+                            🌿📚🌷
+                        </div>
+
+                        <strong>
+                            Cottagecore
+                        </strong>
+
+                        <span>
+                            Natural e aconchegante
+                        </span>
+
+                    </div>
+
+                </label>
+
+
+                <label class="tema-opcao">
+
+                    <input
+                        type="radio"
+                        name="tema"
+                        value="sombrio"
+                    >
+
+                    <div class="tema-preview tema-sombrio">
+
+                        <div class="mini-estante">
+                            🌙📚🕯️
+                        </div>
+
+                        <strong>
+                            Biblioteca Sombria
+                        </strong>
+
+                        <span>
+                            Misteriosa e elegante
+                        </span>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+
+            <div class="modo-tela">
+
+                <div>
+
+                    <strong>
+                        Modo da tela
+                    </strong>
+
+                    <p>
+                        Escolha entre claro, escuro
+                        ou automático.
+                    </p>
+
+                </div>
+
+
+                <div class="modo-opcoes">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="modoTela"
+                            value="claro"
+                        >
+                        ☀️ Claro
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="modoTela"
+                            value="escuro"
+                        >
+                        🌙 Escuro
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="modoTela"
+                            value="automatico"
+                        >
+                        🖥️ Automático
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             META DE LEITURA
+        =================================================== -->
+
+        <section class="cartao-configuracao">
+
+            <div class="titulo-configuracao">
+
+                <div class="icone-configuracao">
+                    🎯
+                </div>
+
+                <div>
+
+                    <h2>Meta anual de leitura</h2>
+
+                    <p>
+                        Defina quantos livros você quer
+                        ler neste ano.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="meta-configuracao">
+
+                <div class="meta-numero">
+
+                    <label for="metaAnual">
+                        Livros por ano
+                    </label>
+
+                    <input
+                        type="number"
+                        id="metaAnual"
+                        min="0"
+                        max="9999"
+                        value="12"
+                    >
+
+                </div>
+
+
+                <div class="meta-exemplo">
+
+                    <span>
+                        📖
+                    </span>
+
+                    <div>
+
+                        <strong id="textoMeta">
+                            12 livros por ano
+                        </strong>
+
+                        <p>
+                            Sua meta será usada na
+                            página principal.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             PRIVACIDADE
+        =================================================== -->
+
+        <section class="cartao-configuracao">
+
+            <div class="titulo-configuracao">
+
+                <div class="icone-configuracao">
+                    🔒
+                </div>
+
+                <div>
+
+                    <h2>Privacidade</h2>
+
+                    <p>
+                        Controle como suas informações
+                        são utilizadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="opcoes-privacidade">
+
+                <label class="opcao-toggle">
+
+                    <div>
+
+                        <strong>
+                            Biblioteca privada
+                        </strong>
+
+                        <span>
+                            Sua biblioteca permanece
+                            apenas neste dispositivo.
+                        </span>
+
+                    </div>
+
+                    <input
+                        type="checkbox"
+                        id="bibliotecaPrivada"
+                        checked
+                    >
+
+                    <span class="toggle-visual"></span>
+
+                </label>
+
+
+                <label class="opcao-toggle">
+
+                    <div>
+
+                        <strong>
+                            Mostrar estatísticas
+                        </strong>
+
+                        <span>
+                            Permite mostrar estatísticas
+                            nas áreas da biblioteca.
+                        </span>
+
+                    </div>
+
+                    <input
+                        type="checkbox"
+                        id="mostrarEstatisticas"
+                        checked
+                    >
+
+                    <span class="toggle-visual"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             DADOS
+        =================================================== -->
+
+        <section class="cartao-configuracao">
+
+            <div class="titulo-configuracao">
+
+                <div class="icone-configuracao">
+                    💾
+                </div>
+
+                <div>
+
+                    <h2>Dados da biblioteca</h2>
+
+                    <p>
+                        Gerencie os dados armazenados
+                        neste navegador.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="acoes-dados">
+
+                <button
+                    type="button"
+                    id="exportarDados"
+                    class="botao-secundario"
+                >
+                    📥 Exportar biblioteca
+                </button>
+
+
+                <label
+                    for="importarDados"
+                    class="botao-secundario"
+                >
+                    📤 Importar biblioteca
+                </label>
+
+                <input
+                    type="file"
+                    id="importarDados"
+                    accept=".json"
+                    hidden
+                >
+
+            </div>
+
+
+            <div class="aviso-dados">
+
+                <strong>
+                    ⚠️ Atenção
+                </strong>
+
+                <p>
+                    A opção abaixo remove os dados da
+                    Biblioteca Pessoal deste navegador.
+                    Essa ação não pode ser desfeita.
+                </p>
+
+                <button
+                    type="button"
+                    id="apagarBiblioteca"
+                    class="botao-perigo"
+                >
+                    Apagar todos os dados
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SALVAR
+        =================================================== -->
+
+        <div class="barra-salvar-configuracao">
+
+            <span id="statusConfiguracao">
+                Nenhuma alteração pendente.
+            </span>
+
+            <button
+                type="button"
+                id="salvarConfiguracoes"
+                class="botao-principal"
+            >
+                💾 Salvar configurações
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/tema.js"></script>
+
+</body>
+
+</html>

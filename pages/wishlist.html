@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Wishlist | Biblioteca Pessoal</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/biblioteca.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <link rel="stylesheet" href="../css/wishlist.css">
+<link
+    rel="stylesheet"
+    href="../css/temas.css"
+>
+
+<link rel="stylesheet" href="../css/temas.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MENU LATERAL
+    ====================================================== -->
+
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            📚
+            <span>Biblioteca</span>
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                🏠 Início
+            </a>
+
+            <a href="adicionar-livro.html">
+                ➕ Adicionar livro
+            </a>
+
+            <a href="livros-ano.html">
+                📅 Livros por ano
+            </a>
+
+            <a
+                href="wishlist.html"
+                class="ativo"
+            >
+                💭 Wishlist
+            </a>
+
+            <a href="financas.html">
+                💰 Finanças
+            </a>
+
+            <a href="comunidade.html">
+                👥 Comunidade
+            </a>
+
+            <a href="configuracoes.html">
+                ⚙️ Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="conteudo-principal wishlist-pagina">
+
+
+        <!-- =================================================
+             CABEÇALHO
+        ================================================== -->
+
+        <header class="cabecalho-pagina">
+
+            <span class="titulo-pequeno">
+                MINHA LISTA DE DESEJOS
+            </span>
+
+            <h1>
+                Wishlist 💭
+            </h1>
+
+            <p>
+                Guarde os livros que você ainda quer ter.
+            </p>
+
+        </header>
+
+
+
+        <!-- =================================================
+             RESUMO
+        ================================================== -->
+
+        <section class="wishlist-resumo">
+
+
+            <div class="wishlist-resumo-card">
+
+                <span class="resumo-icone">
+                    📚
+                </span>
+
+                <div>
+
+                    <strong id="totalWishlist">
+                        0
+                    </strong>
+
+                    <span>
+                        livros desejados
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="wishlist-resumo-card">
+
+                <span class="resumo-icone">
+                    💰
+                </span>
+
+                <div>
+
+                    <strong id="valorWishlist">
+                        R$ 0,00
+                    </strong>
+
+                    <span>
+                        valor total encontrado
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="wishlist-resumo-card">
+
+                <span class="resumo-icone">
+                    ⭐
+                </span>
+
+                <div>
+
+                    <strong id="listaPrincipal">
+                        0
+                    </strong>
+
+                    <span>
+                        listas criadas
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FORMULÁRIO
+        ================================================== -->
+
+        <section class="wishlist-formulario">
+
+
+            <div class="titulo-secao">
+
+                <div>
+
+                    <h2 id="tituloFormulario">
+                        Adicionar à wishlist
+                    </h2>
+
+                    <p>
+                        Cadastre um livro que você deseja comprar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form id="formWishlist">
+
+
+                <input
+                    type="hidden"
+                    id="itemId"
+                >
+
+
+                <!-- -----------------------------------------
+                     INFORMAÇÕES DO LIVRO
+                ------------------------------------------ -->
+
+                <div class="wishlist-bloco">
+
+                    <h3>
+                        📖 Informações do livro
+                    </h3>
+
+
+                    <div class="wishlist-grid">
+
+
+                        <div class="campo">
+
+                            <label for="wishlistTitulo">
+                                Título *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="wishlistTitulo"
+                                required
+                                placeholder="Ex.: O Nome do Vento"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="wishlistAutor">
+                                Autor
+                            </label>
+
+                            <input
+                                type="text"
+                                id="wishlistAutor"
+                                placeholder="Ex.: Patrick Rothfuss"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="wishlistLista">
+                                Lista
+                            </label>
+
+                            <select id="wishlistLista">
+
+                                <option value="Quero comprar">
+                                    Quero comprar
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="novaLista">
+                                Nova lista
+                            </label>
+
+                            <div class="campo-com-botao">
+
+                                <input
+                                    type="text"
+                                    id="novaLista"
+                                    placeholder="Ex.: Fantasia"
+                                >
+
+                                <button
+                                    type="button"
+                                    id="botaoNovaLista"
+                                    class="botao-pequeno"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- -----------------------------------------
+                     COMPRA
+                ------------------------------------------ -->
+
+                <div class="wishlist-bloco">
+
+                    <h3>
+                        🛍️ Onde encontrar
+                    </h3>
+
+
+                    <div class="wishlist-grid">
+
+
+                        <div class="campo">
+
+                            <label for="wishlistLoja">
+                                Loja / site
+                            </label>
+
+                            <input
+                                type="text"
+                                id="wishlistLoja"
+                                placeholder="Ex.: Livraria, Amazon..."
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="wishlistPreco">
+                                Preço encontrado
+                            </label>
+
+                            <input
+                                type="number"
+                                id="wishlistPreco"
+                                min="0"
+                                step="0.01"
+                                placeholder="0,00"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="wishlistData">
+                                Data da pesquisa
+                            </label>
+
+                            <input
+                                type="date"
+                                id="wishlistData"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- -----------------------------------------
+                     OBSERVAÇÕES
+                ------------------------------------------ -->
+
+                <div class="wishlist-bloco">
+
+                    <h3>
+                        📝 Observações
+                    </h3>
+
+
+                    <div class="campo">
+
+                        <label for="wishlistObservacoes">
+                            Anotações
+                        </label>
+
+                        <textarea
+                            id="wishlistObservacoes"
+                            rows="5"
+                            placeholder="Anote edição desejada, capa, promoção, motivo para comprar..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- -----------------------------------------
+                     BOTÕES
+                ------------------------------------------ -->
+
+                <div class="wishlist-acoes">
+
+                    <button
+                        type="button"
+                        id="botaoCancelarEdicao"
+                        class="botao-secundario"
+                        hidden
+                    >
+                        Cancelar edição
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        id="botaoSalvarWishlist"
+                        class="botao-principal"
+                    >
+                        💭 Adicionar à wishlist
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FILTROS
+        ================================================== -->
+
+        <section class="wishlist-filtros">
+
+
+            <div class="titulo-secao">
+
+                <div>
+
+                    <h2>
+                        Meus desejos
+                    </h2>
+
+                    <p>
+                        Encontre rapidamente o livro que procura.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="filtros-grid">
+
+
+                <div class="campo">
+
+                    <label for="filtroBusca">
+                        🔎 Buscar
+                    </label>
+
+                    <input
+                        type="search"
+                        id="filtroBusca"
+                        placeholder="Título ou autor..."
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="filtroLista">
+                        📂 Lista
+                    </label>
+
+                    <select id="filtroLista">
+
+                        <option value="">
+                            Todas as listas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="filtroOrdenacao">
+                        ↕️ Ordenar
+                    </label>
+
+                    <select id="filtroOrdenacao">
+
+                        <option value="recentes">
+                            Mais recentes
+                        </option>
+
+                        <option value="titulo">
+                            Título
+                        </option>
+
+                        <option value="autor">
+                            Autor
+                        </option>
+
+                        <option value="preco-menor">
+                            Menor preço
+                        </option>
+
+                        <option value="preco-maior">
+                            Maior preço
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LISTA DE LIVROS
+        ================================================== -->
+
+        <section>
+
+            <div
+                id="wishlistListaLivros"
+                class="wishlist-lista"
+            >
+            </div>
+
+
+            <div
+                id="wishlistVazia"
+                class="wishlist-vazia"
+            >
+
+                <div>
+                    💭
+                </div>
+
+                <h2>
+                    Sua wishlist está vazia
+                </h2>
+
+                <p>
+                    Adicione seu primeiro livro acima.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+  <!-- Recupera e salva os dados -->
+<script src="../js/storage.js"></script>
+
+<!-- Aplica o tema global -->
+<script src="../js/tema.js"></script>
+
+<!-- Mantém a lista de desejos e seus filtros -->
+<script src="../js/wishlist.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Finanças | Biblioteca Pessoal</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/biblioteca.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <link rel="stylesheet" href="../css/financas.css">
+ <!-- Tema global: sempre depois dos outros CSS -->
+    <link rel="stylesheet" href="../css/temas.css">
+<link rel="stylesheet" href="../css/temas.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MENU
+    ====================================================== -->
+
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            📚
+            <span>Biblioteca</span>
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                🏠 Início
+            </a>
+
+            <a href="adicionar-livro.html">
+                ➕ Adicionar livro
+            </a>
+
+            <a href="livros-ano.html">
+                📅 Livros por ano
+            </a>
+
+            <a href="wishlist.html">
+                💭 Wishlist
+            </a>
+
+            <a
+                href="financas.html"
+                class="ativo"
+            >
+                💰 Finanças
+            </a>
+
+            <a href="comunidade.html">
+                👥 Comunidade
+            </a>
+
+            <a href="configuracoes.html">
+                ⚙️ Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="conteudo-principal financas-pagina">
+
+
+        <header class="cabecalho-pagina">
+
+            <span class="titulo-pequeno">
+                CONTROLE FINANCEIRO
+            </span>
+
+            <h1>
+                Minhas Finanças 💰
+            </h1>
+
+            <p>
+                Acompanhe quanto você investe na sua biblioteca.
+            </p>
+
+        </header>
+
+
+
+        <!-- =================================================
+             RESUMO
+        ================================================== -->
+
+        <section class="financas-resumo">
+
+
+            <div class="financa-card resumo-total">
+
+                <span class="financa-icone">
+                    💰
+                </span>
+
+                <div>
+
+                    <small>
+                        Total gasto
+                    </small>
+
+                    <strong id="totalGasto">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="financa-card">
+
+                <span class="financa-icone">
+                    📚
+                </span>
+
+                <div>
+
+                    <small>
+                        Compras registradas
+                    </small>
+
+                    <strong id="totalCompras">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="financa-card">
+
+                <span class="financa-icone">
+                    📊
+                </span>
+
+                <div>
+
+                    <small>
+                        Média por compra
+                    </small>
+
+                    <strong id="mediaCompra">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="financa-card">
+
+                <span class="financa-icone">
+                    🏪
+                </span>
+
+                <div>
+
+                    <small>
+                        Loja com mais compras
+                    </small>
+
+                    <strong id="lojaMaisUsada">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FORMULÁRIO
+        ================================================== -->
+
+        <section class="financas-formulario">
+
+
+            <div class="titulo-secao">
+
+                <div>
+
+                    <h2 id="tituloFormulario">
+                        Registrar compra
+                    </h2>
+
+                    <p>
+                        Registre quanto pagou por um livro.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form id="formFinanca">
+
+
+                <input
+                    type="hidden"
+                    id="financaId"
+                >
+
+
+                <div class="financas-grid">
+
+
+                    <div class="campo">
+
+                        <label for="livroNome">
+                            Livro *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="livroNome"
+                            required
+                            placeholder="Nome do livro"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="autorNome">
+                            Autor
+                        </label>
+
+                        <input
+                            type="text"
+                            id="autorNome"
+                            placeholder="Nome do autor"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="lojaNome">
+                            Loja
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lojaNome"
+                            placeholder="Ex.: Livraria"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="formaPagamento">
+                            Forma de pagamento
+                        </label>
+
+                        <select id="formaPagamento">
+
+                            <option value="pix">
+                                PIX
+                            </option>
+
+                            <option value="cartao">
+                                Cartão
+                            </option>
+
+                            <option value="dinheiro">
+                                Dinheiro
+                            </option>
+
+                            <option value="boleto">
+                                Boleto
+                            </option>
+
+                            <option value="outro">
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="dataCompra">
+                            Data da compra *
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dataCompra"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="valorCompra">
+                            Valor *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="valorCompra"
+                            min="0"
+                            step="0.01"
+                            required
+                            placeholder="0,00"
+                        >
+
+                    </div>
+
+
+                    <div class="campo campo-largo">
+
+                        <label for="observacoesCompra">
+                            Observações
+                        </label>
+
+                        <textarea
+                            id="observacoesCompra"
+                            rows="4"
+                            placeholder="Edição, promoção, frete, desconto..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="financas-acoes">
+
+                    <button
+                        type="button"
+                        id="cancelarEdicao"
+                        class="botao-secundario"
+                        hidden
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        id="botaoSalvarFinanca"
+                        class="botao-principal"
+                    >
+                        💰 Registrar compra
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FILTROS
+        ================================================== -->
+
+        <section class="financas-filtros">
+
+
+            <div class="titulo-secao">
+
+                <div>
+
+                    <h2>
+                        Histórico de gastos
+                    </h2>
+
+                    <p>
+                        Analise suas compras.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="filtros-financas">
+
+
+                <div class="campo">
+
+                    <label for="filtroAno">
+                        Ano
+                    </label>
+
+                    <select id="filtroAno">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="filtroMes">
+                        Mês
+                    </label>
+
+                    <select id="filtroMes">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                        <option value="1">
+                            Janeiro
+                        </option>
+
+                        <option value="2">
+                            Fevereiro
+                        </option>
+
+                        <option value="3">
+                            Março
+                        </option>
+
+                        <option value="4">
+                            Abril
+                        </option>
+
+                        <option value="5">
+                            Maio
+                        </option>
+
+                        <option value="6">
+                            Junho
+                        </option>
+
+                        <option value="7">
+                            Julho
+                        </option>
+
+                        <option value="8">
+                            Agosto
+                        </option>
+
+                        <option value="9">
+                            Setembro
+                        </option>
+
+                        <option value="10">
+                            Outubro
+                        </option>
+
+                        <option value="11">
+                            Novembro
+                        </option>
+
+                        <option value="12">
+                            Dezembro
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="filtroLoja">
+                        Loja
+                    </label>
+
+                    <select id="filtroLoja">
+
+                        <option value="">
+                            Todas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="filtroBusca">
+                        Buscar livro
+                    </label>
+
+                    <input
+                        type="search"
+                        id="filtroBusca"
+                        placeholder="Digite o nome..."
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             GRÁFICOS
+        ================================================== -->
+
+        <section class="graficos-financas">
+
+
+            <div class="grafico-box">
+
+                <div class="grafico-titulo">
+
+                    <h2>
+                        📅 Gastos por mês
+                    </h2>
+
+                    <span>
+                        Evolução anual
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="graficoMeses"
+                    class="grafico-barras"
+                >
+                </div>
+
+            </div>
+
+
+            <div class="grafico-box">
+
+                <div class="grafico-titulo">
+
+                    <h2>
+                        🏪 Gastos por loja
+                    </h2>
+
+                    <span>
+                        Onde você mais compra
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="graficoLojas"
+                    class="grafico-ranking"
+                >
+                </div>
+
+            </div>
+
+
+            <div class="grafico-box">
+
+                <div class="grafico-titulo">
+
+                    <h2>
+                        ✍️ Gastos por autor
+                    </h2>
+
+                    <span>
+                        Autores que mais custaram
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="graficoAutores"
+                    class="grafico-ranking"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TABELA
+        ================================================== -->
+
+        <section class="historico-financas">
+
+
+            <div
+                id="listaFinancas"
+                class="lista-financas"
+            >
+            </div>
+
+
+            <div
+                id="financasVazio"
+                class="financas-vazio"
+            >
+
+                <div>
+                    💸
+                </div>
+
+                <h2>
+                    Nenhuma compra registrada
+                </h2>
+
+                <p>
+                    Registre sua primeira compra acima.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+<!-- Recupera e salva os dados -->
+<script src="../js/storage.js"></script>
+
+<!-- Aplica o tema global -->
+<script src="../js/tema.js"></script>
+
+<!-- Mantém os registros e gráficos financeiros -->
+<script src="../js/financas.js"></script>
+
+</body>
+
+</html>

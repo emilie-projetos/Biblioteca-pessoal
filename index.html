@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Minha Biblioteca</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/biblioteca.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/darkmode.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/temas.css"
+>
+
+<link rel="stylesheet" href="../css/temas.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================================
+         MENU
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1 id="nomeBiblioteca">
+                Minha Biblioteca
+            </h1>
+
+        </div>
+
+
+        <nav>
+
+            <a
+                href="index.html"
+                class="ativo"
+            >
+                📚 Minha Biblioteca
+            </a>
+
+            <a
+                href="pages/adicionar-livro.html"
+            >
+                ➕ Adicionar Livro
+            </a>
+
+            <a
+                href="pages/livros-ano.html"
+            >
+                📅 Livros por Ano
+            </a>
+
+            <a
+                href="pages/wishlist.html"
+            >
+                ⭐ Lista de Desejos
+            </a>
+
+            <a
+                href="pages/financas.html"
+            >
+                💰 Finanças
+            </a>
+
+            <a
+                href="pages/comunidade.html"
+            >
+                👥 Comunidade
+            </a>
+
+            <a
+                href="pages/configuracoes.html"
+            >
+                ⚙ Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =========================================
+         CONTEÚDO
+    ========================================== -->
+
+    <main>
+
+       <header class="topo">
+
+    <div class="cabecalho-usuario">
+
+        <!-- Nome da biblioteca -->
+        <h2>
+            Biblioteca de
+            <span id="usuarioNome">
+                Leitor
+            </span>
+        </h2>
+
+        <!-- Foto do perfil -->
+        <div
+            id="fotoPerfilGlobal"
+            class="foto-perfil-global"
+            title="Foto do perfil"
+        >
+            👤
+        </div>
+
+    </div>
+
+    <p id="mensagemBiblioteca">
+        Seu cantinho literário.
+    </p>
+
+</header>
+
+
+        <!-- =====================================
+             ESTATÍSTICAS
+        ====================================== -->
+
+        <section class="estatisticas">
+
+
+            <div class="card">
+
+                <h3>
+                    📚 Livros lidos
+                </h3>
+
+                <p id="totalLivros">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    ⭐ Média
+                </h3>
+
+                <p id="mediaAvaliacoes">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🎯 Meta anual
+                </h3>
+
+                <p id="metaLeitura">
+                    100
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    📈 Progresso
+                </h3>
+
+                <p id="progressoMeta">
+                    0%
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ESTANTE
+        ====================================== -->
+
+        <section>
+
+            <div class="titulo-secao">
+
+                <h2>
+                    Minha Estante
+                </h2>
+
+                <a
+                    href="pages/adicionar-livro.html"
+                    class="botao-principal"
+                >
+                    + Adicionar livro
+                </a>
+
+            </div>
+
+
+            <div
+                id="estante"
+                class="estante"
+            >
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             OUTRAS ESTATÍSTICAS
+        ====================================== -->
+
+        <section
+            class="estatisticas-detalhadas"
+        >
+
+            <div class="card">
+
+                <h3>
+                    📖 Físicos
+                </h3>
+
+                <p id="totalFisicos">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    📱 Ebooks
+                </h3>
+
+                <p id="totalEbooks">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🎧 Audiobooks
+                </h3>
+
+                <p id="totalAudiobooks">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🛒 Comprados
+                </h3>
+
+                <p id="totalComprados">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🎁 Presentes
+                </h3>
+
+                <p id="totalPresentes">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🤝 Emprestados
+                </h3>
+
+                <p id="totalEmprestados">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    👑 Autor mais lido
+                </h3>
+
+                <p id="autorMaisLido">
+                    Nenhum
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🏆 Gênero mais lido
+                </h3>
+
+                <p id="generoMaisLido">
+                    Nenhum
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="js/storage.js"></script>
+
+<script src="js/livros.js"></script>
+
+<script src="js/tema.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

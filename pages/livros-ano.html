@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Livros por Ano</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/biblioteca.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/darkmode.css"
+    >
+    <link
+    rel="stylesheet"
+    href="../css/temas.css"
+>
+
+<link rel="stylesheet" href="../css/temas.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         MENU LATERAL
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1 id="nomeBiblioteca">
+                Minha Biblioteca
+            </h1>
+
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                📚 Minha Biblioteca
+            </a>
+
+            <a href="adicionar-livro.html">
+                ➕ Adicionar Livro
+            </a>
+
+            <a
+                href="livros-ano.html"
+                class="menu-ativo"
+            >
+                📅 Livros por Ano
+            </a>
+
+            <a href="wishlist.html">
+                ⭐ Lista de Desejos
+            </a>
+
+            <a href="financas.html">
+                💰 Finanças
+            </a>
+
+            <a href="comunidade.html">
+                👥 Comunidade
+            </a>
+
+            <a href="configuracoes.html">
+                ⚙ Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main>
+
+        <section class="topo-pagina">
+
+            <span class="etiqueta-livro">
+                MINHA ESTANTE
+            </span>
+
+            <h2>
+                📅 Livros por Ano
+            </h2>
+
+            <p>
+                Veja tudo o que você leu e filtre sua biblioteca.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             FILTROS
+        ================================================== -->
+
+        <section class="filtros-livros">
+
+            <div class="grupo-filtro">
+
+                <label for="filtroAno">
+                    Ano
+                </label>
+
+                <select id="filtroAno">
+
+                    <option value="todos">
+                        Todos os anos
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="grupo-filtro">
+
+                <label for="filtroAutor">
+                    Autor
+                </label>
+
+                <select id="filtroAutor">
+
+                    <option value="todos">
+                        Todos os autores
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="grupo-filtro">
+
+                <label for="filtroGenero">
+                    Gênero
+                </label>
+
+                <select id="filtroGenero">
+
+                    <option value="todos">
+                        Todos os gêneros
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="grupo-filtro">
+
+                <label for="filtroAvaliacao">
+                    Avaliação mínima
+                </label>
+
+                <select id="filtroAvaliacao">
+
+                    <option value="todos">
+                        Qualquer avaliação
+                    </option>
+
+                    <option value="5">
+                        ⭐ 5
+                    </option>
+
+                    <option value="4">
+                        ⭐ 4 ou mais
+                    </option>
+
+                    <option value="3">
+                        ⭐ 3 ou mais
+                    </option>
+
+                    <option value="2">
+                        ⭐ 2 ou mais
+                    </option>
+
+                    <option value="1">
+                        ⭐ 1 ou mais
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                id="limparFiltros"
+                type="button"
+                class="botao-secundario"
+            >
+                Limpar filtros
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             RESUMO
+        ================================================== -->
+
+        <section
+            id="resumoAno"
+            class="resumo-ano"
+        >
+
+        </section>
+
+
+        <!-- =================================================
+             LIVROS
+        ================================================== -->
+
+        <section
+            id="listaLivrosAno"
+            class="lista-livros-ano"
+        >
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/storage.js"></script>
+
+<script src="../js/livros.js"></script>
+
+<script src="../js/tema.js"></script>
+
+<script src="../js/livrosAno.js"></script>
+
+</body>
+
+</html>

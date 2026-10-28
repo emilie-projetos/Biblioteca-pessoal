@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Livro | Biblioteca Pessoal</title>
+
+    <!-- CSS principal -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/biblioteca.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/darkmode.css"
+    >
+
+    <!-- CSS específico desta página -->
+    <link
+        rel="stylesheet"
+        href="../css/livro.css"
+    >
+
+    <link
+    rel="stylesheet"
+    href="../css/temas.css"
+>
+
+<link rel="stylesheet" href="../css/temas.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MENU LATERAL
+    ====================================================== -->
+
+    <aside class="menu-lateral">
+
+        <div class="logo">
+            📚
+            <span>Biblioteca</span>
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">
+                🏠 Início
+            </a>
+
+            <a href="adicionar-livro.html">
+                ➕ Adicionar livro
+            </a>
+
+            <a href="livros-ano.html">
+                📅 Livros por ano
+            </a>
+
+            <a href="wishlist.html">
+                💭 Wishlist
+            </a>
+
+            <a href="financas.html">
+                💰 Finanças
+            </a>
+
+            <a href="comunidade.html">
+                👥 Comunidade
+            </a>
+
+            <a href="configuracoes.html">
+                ⚙️ Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="conteudo-principal">
+
+
+        <!-- =================================================
+             BARRA SUPERIOR
+        ================================================== -->
+
+        <div class="barra-livro">
+
+            <a
+                href="../index.html"
+                class="botao-voltar"
+            >
+                ← Voltar para minha biblioteca
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CABEÇALHO
+        ================================================== -->
+
+        <header class="cabecalho-livro">
+
+            <span
+                id="etiquetaLivro"
+                class="etiqueta-livro"
+            >
+                MEU LIVRO
+            </span>
+
+
+            <h1 id="tituloLivro">
+                Carregando...
+            </h1>
+
+
+            <p id="autorLivro">
+                Abrindo seu livro...
+            </p>
+
+        </header>
+
+
+
+        <!-- =================================================
+             LIVRO FECHADO
+        ================================================== -->
+
+        <section
+            id="livroFechadoArea"
+            class="livro-fechado-area"
+        >
+
+            <div
+                id="capaFechada"
+                class="capa-fechada"
+            >
+
+                <!-- A capa será colocada pelo JavaScript -->
+
+            </div>
+
+
+            <p class="instrucao-livro">
+                Clique na capa para abrir o livro
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LIVRO ABERTO
+        ================================================== -->
+
+        <section
+            id="livroAbertoArea"
+            class="livro-aberto-area"
+        >
+
+
+            <div
+                id="livroAberto"
+                class="livro-aberto"
+            >
+
+
+                <!-- =========================================
+                     PÁGINA ESQUERDA
+                ========================================== -->
+
+                <article
+                    id="paginaEsquerda"
+                    class="pagina pagina-esquerda"
+                >
+
+                    <div
+                        id="conteudoPaginaEsquerda"
+                        class="pagina-conteudo"
+                    >
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================================
+                     PÁGINA DIREITA
+                ========================================== -->
+
+                <article
+                    id="paginaDireita"
+                    class="pagina pagina-direita"
+                >
+
+                    <div
+                        id="conteudoPaginaDireita"
+                        class="pagina-conteudo"
+                    >
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =============================================
+                 CONTROLES
+            ============================================== -->
+
+            <div class="controles-pagina">
+
+                <button
+                    type="button"
+                    id="botaoAnterior"
+                >
+                    ← Página anterior
+                </button>
+
+
+                <span id="contadorPagina">
+                    1 / 1
+                </span>
+
+
+                <button
+                    type="button"
+                    id="botaoProxima"
+                >
+                    Próxima página →
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             AÇÕES
+        ================================================== -->
+
+        <div class="acoes-livro">
+
+            <button
+                type="button"
+                id="botaoEditar"
+                class="botao-principal"
+            >
+                ✏️ Editar livro
+            </button>
+
+
+            <button
+                type="button"
+                id="botaoExcluir"
+                class="botao-perigo"
+            >
+                🗑️ Excluir livro
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SCRAPBOOK
+        ================================================== -->
+
+        <section
+            id="scrapbookArea"
+            class="scrapbook-area"
+        >
+
+            <span class="etiqueta-livro">
+                MEMÓRIAS
+            </span>
+
+
+            <h2>
+                📖 Meu Scrapbook
+            </h2>
+
+
+            <p>
+                Guarde aqui momentos, frases, fotos,
+                personagens e lembranças desse livro.
+            </p>
+
+
+
+            <!-- =============================================
+                 FORMULÁRIO
+            ============================================== -->
+
+            <form
+                id="formScrapbook"
+                class="scrap-form"
+            >
+
+
+                <!-- Tipo -->
+
+                <div class="scrap-form-item">
+
+                    <label for="tipoScrap">
+                        Tipo de memória
+                    </label>
+
+
+                    <select id="tipoScrap">
+
+                        <option value="nota">
+                            📝 Nota
+                        </option>
+
+                        <option value="frase">
+                            💬 Frase
+                        </option>
+
+                        <option value="foto">
+                            📷 Foto
+                        </option>
+
+                        <option value="adesivo">
+                            ⭐ Adesivo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Texto -->
+
+                <div class="scrap-form-item">
+
+                    <label for="textoScrap">
+                        Texto
+                    </label>
+
+
+                    <textarea
+                        id="textoScrap"
+                        rows="5"
+                        placeholder="Escreva uma lembrança, frase ou anotação..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- Foto -->
+
+                <div class="scrap-form-item">
+
+                    <label>
+                        Foto
+                    </label>
+
+
+                    <label
+                        for="fotoScrap"
+                        class="scrap-upload"
+                    >
+
+                        📷
+
+                        <span>
+                            Clique para escolher uma imagem
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="fotoScrap"
+                        accept="image/*"
+                        hidden
+                    >
+
+                </div>
+
+
+
+                <!-- Adesivo -->
+
+                <div class="scrap-form-item">
+
+                    <label for="adesivoScrap">
+                        Adesivo
+                    </label>
+
+
+                    <select id="adesivoScrap">
+
+                        <option value="⭐">
+                            ⭐ Estrela
+                        </option>
+
+                        <option value="❤️">
+                            ❤️ Coração
+                        </option>
+
+                        <option value="🌸">
+                            🌸 Flor
+                        </option>
+
+                        <option value="📚">
+                            📚 Livros
+                        </option>
+
+                        <option value="✨">
+                            ✨ Brilho
+                        </option>
+
+                        <option value="☕">
+                            ☕ Café
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="botao-principal"
+                >
+                    + Adicionar ao scrapbook
+                </button>
+
+
+            </form>
+
+
+
+            <!-- =============================================
+                 MEMÓRIAS
+            ============================================== -->
+
+            <div
+                id="scrapbookGrid"
+                class="scrapbook-grid"
+            >
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/storage.js"></script>
+
+    <script src="../js/livro.js"></script>
+
+
+</body>
+
+</html>
